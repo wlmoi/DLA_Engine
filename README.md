@@ -12,9 +12,9 @@ Proyek ini mengimplementasikan inti akselerator komputasi paralel berbasis matri
    - `rtl/` berisi Verilog `.v` untuk alur utama synthesis/simulation.
    - `rtl_sv/` berisi snapshot SystemVerilog `.sv` sebagai referensi.
 
-## Menjawab Topik: Deep Learning Accelerator (DLA) Engine
+## Deep Learning Accelerator (DLA) Engine
 
-## Rumus Dasar Yang Menurunkan Desain RTL
+## Rumus Dasar Module Desain RTL
 
 Bagian ini menjelaskan persamaan matematis yang dipakai untuk menurunkan struktur RTL pada PE array, buffer, dan controller.
 
