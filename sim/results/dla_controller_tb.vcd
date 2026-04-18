@@ -1,0 +1,240 @@
+$date
+	Sun Apr 19 06:06:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module dla_controller_tb $end
+$var wire 2 ! k_idx [1:0] $end
+$var wire 1 " en_pe $end
+$var wire 1 # done $end
+$var wire 1 $ clear_pe $end
+$var wire 1 % busy $end
+$var parameter 32 & K $end
+$var parameter 32 ' K_IDX_W $end
+$var reg 1 ( clk $end
+$var reg 1 ) rst_n $end
+$var reg 1 * start $end
+$var integer 32 + clear_count [31:0] $end
+$var integer 32 , done_count [31:0] $end
+$var integer 32 - en_count [31:0] $end
+$var integer 32 . errors [31:0] $end
+$var integer 32 / expected_k [31:0] $end
+$scope module dut $end
+$var wire 1 ( clk $end
+$var wire 1 ) rst_n $end
+$var wire 1 * start $end
+$var parameter 32 0 K $end
+$var parameter 32 1 K_IDX_W $end
+$var parameter 2 2 S_CLEAR $end
+$var parameter 2 3 S_COMPUTE $end
+$var parameter 2 4 S_DONE $end
+$var parameter 2 5 S_IDLE $end
+$var reg 1 % busy $end
+$var reg 1 $ clear_pe $end
+$var reg 1 # done $end
+$var reg 1 " en_pe $end
+$var reg 2 6 k_idx [1:0] $end
+$var reg 2 7 next_state [1:0] $end
+$var reg 2 8 state [1:0] $end
+$upscope $end
+$scope task pulse_start $end
+$upscope $end
+$scope task run_transaction $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 5
+b11 4
+b10 3
+b1 2
+b10 1
+b100 0
+b10 '
+b100 &
+$end
+#0
+$dumpvars
+b0 8
+b0 7
+b0 6
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+0(
+0%
+0$
+0#
+0"
+b0 !
+$end
+#5000
+1(
+#10000
+0(
+#15000
+1(
+#20000
+0(
+#25000
+1)
+1(
+#30000
+0(
+#35000
+1(
+#40000
+0(
+#45000
+1(
+#50000
+b1 7
+1*
+0(
+#55000
+1%
+1$
+b10 7
+b1 8
+1(
+#60000
+b10 7
+0*
+0(
+#65000
+1"
+0$
+b1 +
+b10 8
+1(
+#70000
+0(
+#75000
+b1 !
+b1 6
+b1 -
+b1 /
+1(
+#80000
+0(
+#85000
+b10 -
+b10 /
+b10 !
+b10 6
+1(
+#90000
+0(
+#95000
+b11 7
+b11 !
+b11 6
+b11 -
+b11 /
+1(
+#100000
+0(
+#105000
+0%
+1#
+0"
+b0 7
+b100 -
+b100 /
+b11 8
+1(
+#110000
+0(
+#115000
+0#
+b0 8
+b1 ,
+1(
+#120000
+0(
+#125000
+b0 !
+b0 6
+b0 /
+b0 ,
+b0 -
+b0 +
+1(
+#130000
+b1 7
+1*
+0(
+#135000
+1%
+1$
+b10 7
+b1 8
+1(
+#140000
+b10 7
+0*
+0(
+#145000
+1"
+0$
+b1 +
+b10 8
+1(
+#150000
+0(
+#155000
+b1 !
+b1 6
+b1 -
+b1 /
+1(
+#160000
+0(
+#165000
+b10 -
+b10 /
+b10 !
+b10 6
+1(
+#170000
+0(
+#175000
+b11 7
+b11 !
+b11 6
+b11 -
+b11 /
+1(
+#180000
+0(
+#185000
+0%
+1#
+0"
+b0 7
+b100 -
+b100 /
+b11 8
+1(
+#190000
+0(
+#195000
+0#
+b0 8
+b1 ,
+1(
+#200000
+0(
+#205000
+b0 !
+b0 6
+1(

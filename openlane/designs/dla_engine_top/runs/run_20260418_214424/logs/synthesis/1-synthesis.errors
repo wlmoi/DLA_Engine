@@ -1,0 +1,1 @@
+ERROR: Latch inferred for signal `\dla_engine_top.\rd_i' from always_comb process `\dla_engine_top.$proc$/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:0$11'.

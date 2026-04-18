@@ -1,0 +1,399 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.38 (git sha1 543faed9c8c, clang++ 17.0.6 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Liberty frontend: /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib
+Imported 229 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_a_buffer_bank'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_b_buffer_bank'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_controller.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_controller.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_controller'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_engine_top.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_engine_top'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_pe.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_pe.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_pe'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv
+Parsing SystemVerilog input from `/project/openlane/designs/dla_engine_top/src/dla_pe_array.sv' to AST representation.
+Storing AST representation for module `$abstract\dla_pe_array'.
+Successfully finished Verilog frontend.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+9. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_engine_top'.
+Generating RTLIL representation for module `\dla_engine_top'.
+Warning: Replacing memory \c_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:44
+
+9.1. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Parameter \N = 4
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+
+9.2. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_pe_array'.
+Parameter \N = 4
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Generating RTLIL representation for module `$paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array'.
+Warning: Replacing memory \b_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:30
+Warning: Replacing memory \a_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:26
+Parameter \N = 4
+Parameter \K = 4
+Parameter \DATA_W = 8
+Parameter \ADDR_W = 4
+Parameter \K_IDX_W = 2
+
+9.3. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_b_buffer_bank'.
+Parameter \N = 4
+Parameter \K = 4
+Parameter \DATA_W = 8
+Parameter \ADDR_W = 4
+Parameter \K_IDX_W = 2
+Generating RTLIL representation for module `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank'.
+Warning: Replacing memory \mem with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:29
+Parameter \N = 4
+Parameter \K = 4
+Parameter \DATA_W = 8
+Parameter \ADDR_W = 4
+Parameter \K_IDX_W = 2
+
+9.4. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_a_buffer_bank'.
+Parameter \N = 4
+Parameter \K = 4
+Parameter \DATA_W = 8
+Parameter \ADDR_W = 4
+Parameter \K_IDX_W = 2
+Generating RTLIL representation for module `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank'.
+Warning: Replacing memory \mem with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:29
+Parameter \K = 4
+Parameter \K_IDX_W = 2
+
+9.5. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_controller'.
+Parameter \K = 4
+Parameter \K_IDX_W = 2
+Generating RTLIL representation for module `$paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller'.
+
+9.6. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+
+9.7. Executing AST frontend in derive mode using pre-parsed AST for module `\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Generating RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Reprocessing module $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array because instantiated module $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe has become available.
+Generating RTLIL representation for module `$paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array'.
+Warning: Replacing memory \acc_mat with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:0
+Warning: Replacing memory \b_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:30
+Warning: Replacing memory \a_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:26
+
+9.8. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+Parameter \DATA_W = 8
+Parameter \ACC_W = 24
+Found cached RTLIL representation for module `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe'.
+
+9.9. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:         $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+
+9.10. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:         $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+Removing unused module `$abstract\dla_pe_array'.
+Removing unused module `$abstract\dla_pe'.
+Removing unused module `$abstract\dla_engine_top'.
+Removing unused module `$abstract\dla_controller'.
+Removing unused module `$abstract\dla_b_buffer_bank'.
+Removing unused module `$abstract\dla_a_buffer_bank'.
+Removed 6 unused modules.
+
+10. Generating Graphviz representation of design.
+Writing dot description to `/project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/hierarchy.dot'.
+Dumping module dla_engine_top to page 1.
+Renaming module dla_engine_top to dla_engine_top.
+WARNING: TRISTATE_BUFFER_MAP is defined but could not be found: /pdk/gf180mcuA/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tribuff_map.v
+
+11. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:         $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+
+11.2. Analyzing design hierarchy..
+Top module:  \dla_engine_top
+Used module:     $paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array
+Used module:         $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank
+Used module:     $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank
+Used module:     $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller
+Removed 0 unused modules.
+
+12. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+13. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 17 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:0$11 in module dla_engine_top.
+Marked 2 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:59$145 in module $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.
+Removed 1 dead cases from process $proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:0$142 in module $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.
+Marked 4 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:0$142 in module $paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.
+Removed 4 dead cases from process $proc$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:0$125 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank.
+Marked 4 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:0$125 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank.
+Marked 1 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:24$108 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank.
+Removed 4 dead cases from process $proc$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:0$83 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank.
+Marked 4 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:0$83 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank.
+Marked 1 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:24$66 in module $paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank.
+Marked 2 switch rules as full_case in process $proc$/project/openlane/designs/dla_engine_top/src/dla_pe.sv:22$162 in module $paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe.
+Removed a total of 9 dead cases.
+
+14. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 77 assignments to connections.
+
+15. Executing PROC_INIT pass (extract init attributes).
+
+16. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `$paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.$proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:59$145'.
+Found async reset \rst_n in `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe.$proc$/project/openlane/designs/dla_engine_top/src/dla_pe.sv:22$162'.
+
+17. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~67 debug messages>
+
+18. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\dla_engine_top.$proc$/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:0$28'.
+Creating decoders for process `\dla_engine_top.$proc$/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:0$11'.
+     1/18: $17\rd_data[23:0]
+     2/18: $16\rd_data[23:0]
+     3/18: $15\rd_data[23:0]
+     4/18: $14\rd_data[23:0]
+     5/18: $13\rd_data[23:0]
+     6/18: $12\rd_data[23:0]
+     7/18: $11\rd_data[23:0]
+     8/18: $10\rd_data[23:0]
+     9/18: $9\rd_data[23:0]
+    10/18: $8\rd_data[23:0]
+    11/18: $7\rd_data[23:0]
+    12/18: $6\rd_data[23:0]
+    13/18: $5\rd_data[23:0]
+    14/18: $4\rd_data[23:0]
+    15/18: $3\rd_data[23:0]
+    16/18: $2\rd_data[23:0]
+    17/18: $1\rd_i[31:0]
+    18/18: $1\rd_data[23:0]
+Creating decoders for process `$paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.$proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:0$154'.
+Creating decoders for process `$paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.$proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:59$145'.
+     1/2: $0\state[1:0]
+     2/2: $0\k_idx[1:0]
+Creating decoders for process `$paramod$9461ae7e6bc85e2a75c50ff7cee8705b01fc80de\dla_controller.$proc$/project/openlane/designs/dla_engine_top/src/dla_controller.sv:0$142'.
+     1/4: $4\next_state[1:0]
+     2/4: $3\next_state[1:0]
+     3/4: $2\next_state[1:0]
+     4/4: $1\next_state[1:0]
+Creating decoders for process `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank.$proc$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:0$125'.
+     1/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:39$107_DATA[7:0]$141
+     2/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:39$106_DATA[7:0]$139
+     3/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:39$105_DATA[7:0]$137
+     4/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:39$104_DATA[7:0]$135
+Creating decoders for process `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_a_buffer_bank.$proc$/project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:24$108'.
+     1/18: $1\wr_r[31:0]
+     2/18: $1\wr_c[31:0]
+     3/18: $0\mem[15][7:0]
+     4/18: $0\mem[14][7:0]
+     5/18: $0\mem[13][7:0]
+     6/18: $0\mem[12][7:0]
+     7/18: $0\mem[11][7:0]
+     8/18: $0\mem[10][7:0]
+     9/18: $0\mem[9][7:0]
+    10/18: $0\mem[8][7:0]
+    11/18: $0\mem[7][7:0]
+    12/18: $0\mem[6][7:0]
+    13/18: $0\mem[5][7:0]
+    14/18: $0\mem[4][7:0]
+    15/18: $0\mem[3][7:0]
+    16/18: $0\mem[2][7:0]
+    17/18: $0\mem[1][7:0]
+    18/18: $0\mem[0][7:0]
+Creating decoders for process `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank.$proc$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:0$83'.
+     1/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:39$65_DATA[7:0]$103
+     2/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:39$64_DATA[7:0]$100
+     3/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:39$63_DATA[7:0]$97
+     4/4: $1$mem2reg_rd$\mem$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:39$62_DATA[7:0]$94
+Creating decoders for process `$paramod$8f51d40df666c0a63fb93199fd4bc8cdce36c867\dla_b_buffer_bank.$proc$/project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:24$66'.
+     1/18: $1\wr_r[31:0]
+     2/18: $1\wr_c[31:0]
+     3/18: $0\mem[15][7:0]
+     4/18: $0\mem[14][7:0]
+     5/18: $0\mem[13][7:0]
+     6/18: $0\mem[12][7:0]
+     7/18: $0\mem[11][7:0]
+     8/18: $0\mem[10][7:0]
+     9/18: $0\mem[9][7:0]
+    10/18: $0\mem[8][7:0]
+    11/18: $0\mem[7][7:0]
+    12/18: $0\mem[6][7:0]
+    13/18: $0\mem[5][7:0]
+    14/18: $0\mem[4][7:0]
+    15/18: $0\mem[3][7:0]
+    16/18: $0\mem[2][7:0]
+    17/18: $0\mem[1][7:0]
+    18/18: $0\mem[0][7:0]
+Creating decoders for process `$paramod$fefa46cc4a8b9d9665b7f2e9c5ea083f65fa2e63\dla_pe.$proc$/project/openlane/designs/dla_engine_top/src/dla_pe.sv:22$162'.
+     1/1: $0\acc_out[23:0]
+Creating decoders for process `$paramod$75615e845bbc84a26f466298828c6107a73f986a\dla_pe_array.$proc$/project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:0$213'.
+
+19. Executing PROC_DLATCH pass (convert process syncs to latches).
+ERROR: Latch inferred for signal `\dla_engine_top.\rd_i' from always_comb process `\dla_engine_top.$proc$/project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:0$11'.

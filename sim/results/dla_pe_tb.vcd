@@ -1,0 +1,139 @@
+$date
+	Sun Apr 19 06:06:25 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module dla_pe_tb $end
+$var wire 24 ! acc_out [23:0] $end
+$var parameter 32 " ACC_W $end
+$var parameter 32 # DATA_W $end
+$var reg 8 $ a_in [7:0] $end
+$var reg 8 % b_in [7:0] $end
+$var reg 1 & clear $end
+$var reg 1 ' clk $end
+$var reg 1 ( en $end
+$var reg 1 ) rst_n $end
+$var integer 32 * errors [31:0] $end
+$scope module dut $end
+$var wire 8 + a_in [7:0] $end
+$var wire 8 , b_in [7:0] $end
+$var wire 1 & clear $end
+$var wire 1 ' clk $end
+$var wire 1 ( en $end
+$var wire 1 ) rst_n $end
+$var wire 16 - mult_res [15:0] $end
+$var wire 24 . mult_ext [23:0] $end
+$var parameter 32 / ACC_W $end
+$var parameter 32 0 DATA_W $end
+$var reg 24 1 acc_out [23:0] $end
+$upscope $end
+$scope task apply_cycle $end
+$upscope $end
+$scope task expect_acc $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 0
+b11000 /
+b1000 #
+b11000 "
+$end
+#0
+$dumpvars
+b0 1
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+0)
+0(
+0'
+0&
+b0 %
+b0 $
+b0 !
+$end
+#5000
+1'
+#10000
+0'
+#15000
+1'
+#20000
+0'
+#25000
+1)
+1'
+#30000
+0'
+#35000
+1'
+#40000
+b11110 .
+b11110 -
+b110 %
+b110 ,
+b101 $
+b101 +
+1(
+1&
+0'
+#45000
+1'
+#50000
+b11 %
+b11 ,
+b110 .
+b110 -
+b10 $
+b10 +
+0&
+0'
+#55000
+b110 !
+b110 1
+1'
+#60000
+b10 %
+b10 ,
+b111111111111111111111000 .
+b1111111111111000 -
+b11111100 $
+b11111100 +
+0'
+#65000
+b111111111111111111111110 !
+b111111111111111111111110 1
+1'
+#70000
+b111 %
+b111 ,
+b110001 .
+b110001 -
+b111 $
+b111 +
+0(
+0'
+#75000
+1'
+#80000
+b0 %
+b0 ,
+b0 .
+b0 -
+b0 $
+b0 +
+1&
+0'
+#85000
+b0 !
+b0 1
+1'
+#86000

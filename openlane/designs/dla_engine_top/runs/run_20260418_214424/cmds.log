@@ -1,0 +1,42 @@
+Sat Apr 18 14:44:45 +0000 2026 - Executing "{/nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/mergeLef.py -o /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/merged.nom.lef -i /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef |& tee /dev/null}"
+
+Sat Apr 18 14:44:45 +0000 2026 - Executing "{/nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/mergeLef.py -o /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/merged.min.lef -i /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__min.tlef /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef |& tee /dev/null}"
+
+Sat Apr 18 14:44:45 +0000 2026 - Executing "{/nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/mergeLef.py -o /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/merged.max.lef -i /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef |& tee /dev/null}"
+
+Sat Apr 18 14:44:45 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/mergeLib.py --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/merged.lib --name gf180mcuA_merged /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}"
+
+Sat Apr 18 14:44:46 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/libtrim.py --cell-file /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/trimmed.lib.exclude.list --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/trimmed.lib /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/merged.lib}"
+
+Sat Apr 18 14:44:47 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/libtrim.py --cell-file /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts.lib.exclude.list --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts.lib /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib}"
+
+Sat Apr 18 14:44:49 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/libtrim.py --cell-file /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts-fastest.lib.exclude.list --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts-fastest.lib /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib}"
+
+Sat Apr 18 14:44:51 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/libtrim.py --cell-file /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts-slowest.lib.exclude.list --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/cts/cts-slowest.lib /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib}"
+
+Sat Apr 18 14:44:52 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/new_tracks.py -i /pdk/gf180mcuA/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tracks.info -o /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/routing/config.tracks}"
+
+Sat Apr 18 14:44:52 +0000 2026 - Executing "{echo {OpenLane } > /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/OPENLANE_COMMIT}"
+
+Sat Apr 18 14:44:52 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/clean_models.py --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/blackbox/gf180mcu_fd_sc_mcu7t5v0.patched.v /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/gf180mcu_fd_sc_mcu7t5v0.v}"
+
+Sat Apr 18 14:44:52 +0000 2026 - Executing "{yosys -c /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/yosys/blackbox.tcl}"
+
+Sat Apr 18 14:44:53 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/clean_models.py --output /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/blackbox/primitives.patched.v /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/primitives.v}"
+
+Sat Apr 18 14:44:53 +0000 2026 - Executing "{yosys -c /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/yosys/blackbox.tcl}"
+
+Sat Apr 18 14:44:53 +0000 2026 - Executing "{verilator -Wall --lint-only --Wno-DECLFILENAME --top-module dla_engine_top /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/blackbox/gf180mcu_fd_sc_mcu7t5v0.v /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/blackbox/primitives.v /project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv /project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv /project/openlane/designs/dla_engine_top/src/dla_controller.sv /project/openlane/designs/dla_engine_top/src/dla_engine_top.sv /project/openlane/designs/dla_engine_top/src/dla_pe.sv /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv -Wno-fatal --relative-includes |& tee /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/logs/synthesis/linter.log /dev/null}"
+
+Sat Apr 18 14:44:54 +0000 2026 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /pdk/gf180mcuA/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib > /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/1-gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.no_pg.lib}"
+
+Sat Apr 18 14:44:56 +0000 2026 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/trimmed.lib > /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Sat Apr 18 14:44:58 +0000 2026 - Executing "yosys -c /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/yosys/synth.tcl |& tee /dev/null /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/logs/synthesis/1-synthesis.log"
+
+Sat Apr 18 14:44:58 +0000 2026 - Executing "{yosys -c /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/yosys/synth.tcl |& tee /dev/null /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/logs/synthesis/1-synthesis.log}"
+
+Sat Apr 18 14:45:09 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/write_runtime.py --conclude --seconds --time-in 1776523509 {flow failed}}"
+
+Sat Apr 18 14:45:10 +0000 2026 - Executing "{python3 /nix/store/xpc7xd67rslanlqh566s6jph53bn830w-openlane1-1.1.1/bin/scripts/generate_reports.py -d /project/openlane/designs/dla_engine_top --design_name dla_engine_top --tag run_20260418_214424 --output_file /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/reports/metrics.csv --man_report /project/openlane/designs/dla_engine_top/runs/run_20260418_214424/reports/manufacturability.rpt --run_path /project/openlane/designs/dla_engine_top/runs/run_20260418_214424}"
+

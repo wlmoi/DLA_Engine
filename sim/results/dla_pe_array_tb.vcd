@@ -1,0 +1,326 @@
+$date
+	Sun Apr 19 06:06:24 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module dla_pe_array_tb $end
+$var wire 96 ! c_bus [95:0] $end
+$var parameter 32 " ACC_W $end
+$var parameter 32 # DATA_W $end
+$var parameter 32 $ N $end
+$var reg 16 % a_bus [15:0] $end
+$var reg 16 & b_bus [15:0] $end
+$var reg 1 ' clear $end
+$var reg 1 ( clk $end
+$var reg 1 ) en $end
+$var reg 1 * rst_n $end
+$var integer 32 + errors [31:0] $end
+$scope function c_at $end
+$upscope $end
+$scope module dut $end
+$var wire 16 , a_bus [15:0] $end
+$var wire 16 - b_bus [15:0] $end
+$var wire 1 ' clear $end
+$var wire 1 ( clk $end
+$var wire 1 ) en $end
+$var wire 1 * rst_n $end
+$var wire 96 . c_bus [95:0] $end
+$var parameter 32 / ACC_W $end
+$var parameter 32 0 DATA_W $end
+$var parameter 32 1 N $end
+$scope begin GEN_PE_ROWS[0] $end
+$var parameter 2 2 i $end
+$scope begin GEN_PE_COLS[0] $end
+$var wire 24 3 acc_val [23:0] $end
+$var parameter 32 4 FLAT_IDX $end
+$var parameter 2 5 j $end
+$scope module u_pe $end
+$var wire 8 6 a_in [7:0] $end
+$var wire 8 7 b_in [7:0] $end
+$var wire 1 ' clear $end
+$var wire 1 ( clk $end
+$var wire 1 ) en $end
+$var wire 1 * rst_n $end
+$var wire 16 8 mult_res [15:0] $end
+$var wire 24 9 mult_ext [23:0] $end
+$var parameter 32 : ACC_W $end
+$var parameter 32 ; DATA_W $end
+$var reg 24 < acc_out [23:0] $end
+$upscope $end
+$upscope $end
+$scope begin GEN_PE_COLS[1] $end
+$var wire 24 = acc_val [23:0] $end
+$var parameter 32 > FLAT_IDX $end
+$var parameter 2 ? j $end
+$scope module u_pe $end
+$var wire 8 @ a_in [7:0] $end
+$var wire 8 A b_in [7:0] $end
+$var wire 1 ' clear $end
+$var wire 1 ( clk $end
+$var wire 1 ) en $end
+$var wire 1 * rst_n $end
+$var wire 16 B mult_res [15:0] $end
+$var wire 24 C mult_ext [23:0] $end
+$var parameter 32 D ACC_W $end
+$var parameter 32 E DATA_W $end
+$var reg 24 F acc_out [23:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin GEN_PE_ROWS[1] $end
+$var parameter 2 G i $end
+$scope begin GEN_PE_COLS[0] $end
+$var wire 24 H acc_val [23:0] $end
+$var parameter 32 I FLAT_IDX $end
+$var parameter 2 J j $end
+$scope module u_pe $end
+$var wire 8 K a_in [7:0] $end
+$var wire 8 L b_in [7:0] $end
+$var wire 1 ' clear $end
+$var wire 1 ( clk $end
+$var wire 1 ) en $end
+$var wire 1 * rst_n $end
+$var wire 16 M mult_res [15:0] $end
+$var wire 24 N mult_ext [23:0] $end
+$var parameter 32 O ACC_W $end
+$var parameter 32 P DATA_W $end
+$var reg 24 Q acc_out [23:0] $end
+$upscope $end
+$upscope $end
+$scope begin GEN_PE_COLS[1] $end
+$var wire 24 R acc_val [23:0] $end
+$var parameter 32 S FLAT_IDX $end
+$var parameter 2 T j $end
+$scope module u_pe $end
+$var wire 8 U a_in [7:0] $end
+$var wire 8 V b_in [7:0] $end
+$var wire 1 ' clear $end
+$var wire 1 ( clk $end
+$var wire 1 ) en $end
+$var wire 1 * rst_n $end
+$var wire 16 W mult_res [15:0] $end
+$var wire 24 X mult_ext [23:0] $end
+$var parameter 32 Y ACC_W $end
+$var parameter 32 Z DATA_W $end
+$var reg 24 [ acc_out [23:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope task drive_cycle $end
+$upscope $end
+$scope task expect_c $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 Z
+b11000 Y
+b1 T
+b11 S
+b1000 P
+b11000 O
+b0 J
+b10 I
+b1 G
+b1000 E
+b11000 D
+b1 ?
+b1 >
+b1000 ;
+b11000 :
+b0 5
+b0 4
+b0 2
+b10 1
+b1000 0
+b11000 /
+b10 $
+b1000 #
+b11000 "
+$end
+#0
+$dumpvars
+b0 [
+b0 X
+b0 W
+b0 V
+b0 U
+b0 R
+b0 Q
+b0 N
+b0 M
+b0 L
+b0 K
+b0 H
+b0 F
+b0 C
+b0 B
+b0 A
+b0 @
+b0 =
+b0 <
+b0 9
+b0 8
+b0 7
+b0 6
+b0 3
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+0)
+0(
+0'
+b0 &
+b0 %
+b0 !
+$end
+#5000
+1(
+#10000
+0(
+#15000
+1(
+#20000
+0(
+#25000
+1*
+1(
+#30000
+1'
+0(
+#35000
+1(
+#40000
+b11 9
+b11 8
+b11 7
+b100 C
+b100 B
+b100 A
+b110 N
+b110 M
+b11 L
+b1000 X
+b1000 W
+b100 V
+b1 6
+b1 @
+b10 K
+b10 U
+b10000000011 &
+b10000000011 -
+b1000000001 %
+b1000000001 ,
+1)
+0'
+0(
+#45000
+b1000 R
+b1000 [
+b110 H
+b110 Q
+b100 =
+b100 F
+b1000000000000000000000000110000000000000000000000100000000000000000000000011 !
+b1000000000000000000000000110000000000000000000000100000000000000000000000011 .
+b11 3
+b11 <
+1(
+#50000
+b10 7
+b11111110 A
+b10 L
+b11111110 V
+b111111111111111111111110 9
+b1111111111111110 8
+b11111111 6
+b10 C
+b10 B
+b11111111 @
+b0 N
+b0 M
+b0 K
+b0 X
+b0 W
+b0 U
+b1111111000000010 &
+b1111111000000010 -
+b11111111 %
+b11111111 ,
+0(
+#55000
+b1 3
+b1 <
+b1000000000000000000000000110000000000000000000000110000000000000000000000001 !
+b1000000000000000000000000110000000000000000000000110000000000000000000000001 .
+b110 =
+b110 F
+1(
+#60000
+b1 7
+b101 A
+b1 L
+b101 V
+b11 9
+b11 8
+b11 6
+b1111 C
+b1111 B
+b11 @
+b1 N
+b1 M
+b1 K
+b101 X
+b101 W
+b1 U
+b10100000001 &
+b10100000001 -
+b100000011 %
+b100000011 ,
+0(
+#65000
+b1101 R
+b1101 [
+b111 H
+b111 Q
+b10101 =
+b10101 F
+b1101000000000000000000000111000000000000000000010101000000000000000000000100 !
+b1101000000000000000000000111000000000000000000010101000000000000000000000100 .
+b100 3
+b100 <
+1(
+#70000
+b0 7
+b0 A
+b0 L
+b0 V
+b0 9
+b0 8
+b0 6
+b0 C
+b0 B
+b0 @
+b0 N
+b0 M
+b0 K
+b0 X
+b0 W
+b0 U
+b0 &
+b0 -
+b0 %
+b0 ,
+0)
+0(
+#75000
+1(
+#76000

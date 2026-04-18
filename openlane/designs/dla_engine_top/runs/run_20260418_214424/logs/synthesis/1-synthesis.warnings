@@ -1,0 +1,9 @@
+Warning: Replacing memory \c_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_engine_top.sv:44
+Warning: Replacing memory \b_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:30
+Warning: Replacing memory \a_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:26
+Warning: Replacing memory \mem with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_b_buffer_bank.sv:29
+Warning: Replacing memory \mem with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_a_buffer_bank.sv:29
+Warning: Replacing memory \acc_mat with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:0
+Warning: Replacing memory \b_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:30
+Warning: Replacing memory \a_vec with list of registers. See /project/openlane/designs/dla_engine_top/src/dla_pe_array.sv:26
+WARNING: TRISTATE_BUFFER_MAP is defined but could not be found: /pdk/gf180mcuA/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tribuff_map.v
