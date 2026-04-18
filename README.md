@@ -14,6 +14,155 @@ Proyek ini mengimplementasikan inti akselerator komputasi paralel berbasis matri
 
 ## Menjawab Topik: Deep Learning Accelerator (DLA) Engine
 
+## Rumus Dasar Yang Menurunkan Desain RTL
+
+Bagian ini menjelaskan persamaan matematis yang dipakai untuk menurunkan struktur RTL pada PE array, buffer, dan controller.
+
+### 1) Persamaan Komputasi Inti (Matrix Multiply / GEMM)
+
+Untuk setiap elemen output matriks C:
+
+$$
+C_{i,j} = \sum_{k=0}^{K-1} A_{i,k} \times B_{k,j}
+$$
+
+Rumus ini direalisasikan sebagai akumulasi bertahap di PE:
+
+$$
+acc_{i,j}^{(0)} = 0
+$$
+
+$$
+acc_{i,j}^{(t+1)} = acc_{i,j}^{(t)} + A_{i,t} \times B_{t,j}, \quad t = 0,1,\dots,K-1
+$$
+
+$$
+C_{i,j} = acc_{i,j}^{(K)}
+$$
+
+Mapping ke RTL:
+- Sinyal `clear` pada PE menerapkan $acc_{i,j}^{(0)} = 0$.
+- Sinyal `en` pada PE menjalankan langkah rekurensi akumulasi untuk setiap siklus `t`.
+
+### 2) Rumus Dataflow Output-Stationary
+
+Dataflow yang dipakai adalah output-stationary, sehingga partial sum tetap di register PE selama iterasi `k`.
+
+Pada siklus ke-`t`:
+
+$$
+a_i(t) = A_{i,t}, \quad b_j(t) = B_{t,j}
+$$
+
+$$
+acc_{i,j}(t+1) = acc_{i,j}(t) + a_i(t)\,b_j(t)
+$$
+
+Konsekuensinya:
+- Tidak perlu write-back partial sum ke memori eksternal setiap siklus.
+- Trafik data berkurang karena hanya stream A/B yang bergerak, bukan hasil parsial C.
+
+### 3) Rumus Addressing Buffer (Linearized Memory)
+
+Pemetaan alamat linier yang dipakai pada bank buffer:
+
+$$
+addr_A(i,k) = i\cdot K + k
+$$
+
+$$
+addr_B(k,j) = k\cdot N + j
+$$
+
+Saat `k_idx = t`, vektor yang dibaca ke PE array:
+
+$$
+row\_vector[i] = mem_A[addr_A(i,t)]
+$$
+
+$$
+col\_vector[j] = mem_B[addr_B(t,j)]
+$$
+
+### 4) Rumus Packing/Unpacking Bus RTL
+
+Pemetaan indeks bit yang digunakan:
+
+$$
+a\_in(i) = a\_bus[(i\cdot DATA\_W) +: DATA\_W]
+$$
+
+$$
+b\_in(j) = b\_bus[(j\cdot DATA\_W) +: DATA\_W]
+$$
+
+$$
+c\_bus[((i\cdot N + j)\cdot ACC\_W) +: ACC\_W] = acc_{i,j}
+$$
+
+Rumus ini adalah alasan kenapa RTL memakai flatten bus untuk antarmuka top-level dan tetap menjaga koneksi array PE yang deterministik.
+
+### 5) Rumus Ukuran Lebar Sinyal
+
+Lebar alamat minimal:
+
+$$
+ADDR\_W = \lceil \log_2(N\cdot K) \rceil
+$$
+
+$$
+C\_ADDR\_W = \lceil \log_2(N\cdot N) \rceil
+$$
+
+$$
+K\_IDX\_W = \lceil \log_2(K) \rceil
+$$
+
+Perkiraan lebar akumulator agar aman overflow untuk penjumlahan $K$ hasil perkalian signed:
+
+$$
+ACC\_W \ge 2\cdot DATA\_W + \lceil \log_2(K) \rceil
+$$
+
+Dengan default proyek ($DATA\_W=8, K=4$):
+
+$$
+ACC\_{min} = 2\cdot 8 + \lceil\log_2(4)\rceil = 18
+$$
+
+Implementasi memakai `ACC_W=24` untuk memberi headroom tambahan.
+
+### 6) Rumus Throughput dan Siklus
+
+Jumlah PE:
+
+$$
+PE\_count = N^2
+$$
+
+Jumlah MAC paralel per siklus compute:
+
+$$
+MAC/cycle = N^2
+$$
+
+Jumlah MAC total per transaksi matrix multiply:
+
+$$
+MAC\_{total} = N^2 \cdot K
+$$
+
+Urutan fase FSM controller:
+- `CLEAR` selama 1 siklus.
+- `COMPUTE` selama $K$ siklus.
+- `DONE` sebagai fase selesai/handshake.
+
+Untuk default $N=4, K=4$:
+
+$$
+MAC/cycle = 16, \quad MAC\_{total} = 64
+$$
+
 ### 1) Processing Elements (PE) Array
 
 Bagian yang sudah dibuat:
