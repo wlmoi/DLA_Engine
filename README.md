@@ -1,6 +1,6 @@
 # Deep Learning Accelerator (DLA) Engine
 
-Proyek ini mengimplementasikan inti akselerator komputasi paralel berbasis matrix-multiply (MAC array) yang relevan untuk CNN klasik dan juga fondasi komponen GenAI (perkalian matriks besar). Implementasi ditargetkan ke alur RTL sampai layout (GDS) menggunakan OpenLane pada PDK GF180MCU.
+Proyek ini mengimplementasikan inti akselerator komputasi paralel berbasis matrix-multiply (MAC array) yang relevan untuk CNN klasik dan komponen GenAI (perkalian matriks besar). Implementasi ditargetkan ke alur RTL sampai layout (GDS) menggunakan OpenLane pada PDK GF180MCU.
 
 ## Ringkasan Apa Yang Sudah Dibuat
 
